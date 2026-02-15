@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "POS Highlighter",
+  "version": "1.0.0",
+  "description": "Highlight nouns, verbs, and adjectives on any webpage.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "POS Highlighter",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["libs/compromise.min.js", "content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
